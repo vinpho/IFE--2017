@@ -1,0 +1,67 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	box-sizing: border-box;
+	padding: 0.732%;
+}
+
+/*清除浮动*/
+.row:before, 
+.row:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+/*选择所有以’col-‘开头的类*/
+[class^='col-']{
+	float: left;
+	height: 50px;
+	background: #eee;
+	border: 1px solid #999;
+	margin: 0.732%;
+	font-size: 0.75em;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 4.125em;
+}
+
+/*大于768px*/
+@media(min-width: 769px) {
+	.col-md-1{
+	  	width: calc( 8.333% - 1.464% );
+	}
+	.col-md-2{
+	  	width: calc(16.666% - 1.464%);				  	
+	}
+	.col-md-3{
+	  	width: calc(25% - 1.464%);		  	
+	}
+	.col-md-4{
+	    width: calc(33.333% - 1.464%);		  	
+	}
+	.col-md-6{
+	  	width: calc(50% - 1.464%);		  	
+	}
+}
+
+
+/*小于768*/
+@media(max-width: 768px) {
+ 	.col-sm-12{
+ 		width: calc(100% - 1.464%);
+ 	}
+ 	.col-sm-8{
+ 		width: calc(66.666% - 1.464%);
+ 	}
+ 	.col-sm-6{
+ 		width: calc(50% - 1.464%);
+ 	}
+ 	.col-sm-3{
+ 		width: calc(25% - 1.464%);
+ 	}
+ 	.col-sm-2{
+ 		width: calc(16.666% - 1.464%);		
+ 	}
+}
